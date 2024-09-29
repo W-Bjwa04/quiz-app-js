@@ -80,11 +80,11 @@ li.option.active {
     background-color: #333;
     padding: 1.5rem;
     border-radius: 10px;
-    visibility: visible;
+    display: block;
 }
 
 .result-container.hidden {
-   visibility: hidden;
+   display:none;
 }
 
 .result-title {
@@ -150,11 +150,11 @@ li.option.active {
 }
 
 .restart-btn.hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .hidden{
-    visibility: hidden;
+    display: none;
 }
 
 /* Responsive Design */
