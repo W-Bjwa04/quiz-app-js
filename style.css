@@ -178,3 +178,30 @@ li.option.active {
 }
 
 
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1.title {
+        font-size: 2rem;
+    }
+
+    .question {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Reduce gap between question container and next button */
+    .quiz-container {
+        gap: 1rem; /* Reduce the gap from 1.5rem to 1rem on mobile */
+    }
+
+    .question-container {
+        margin-bottom: 0.5rem; /* Reduce bottom margin of question container */
+    }
+}
