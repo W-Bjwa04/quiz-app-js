@@ -84,11 +84,11 @@ li.option.active {
     background-color: #333;
     padding: 1.5rem;
     border-radius: 10px;
-    visibility: visible;
+    display: none; /* Initially hidden using display */
 }
 
-.result-container.hidden {
-    visibility: hidden;
+.result-container.active {
+    display: block; /* Shown when active */
 }
 
 .result-title {
@@ -152,11 +152,11 @@ li.option.active {
 }
 
 .restart-btn.hidden {
-    visibility: hidden;
+    display: none; /* Hide using display none */
 }
 
 .hidden {
-    visibility: hidden;
+    display: none; /* Ensure hidden elements do not take space */
 }
 
 /* Responsive Design */
