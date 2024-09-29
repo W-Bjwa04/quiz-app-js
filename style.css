@@ -13,8 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Allow vertical scrolling if necessary */
 }
 
 .container {
@@ -36,9 +34,7 @@ h1.title {
 .quiz-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Adjust gap for spacing */
-    flex-grow: 1; /* Allow the quiz container to take up remaining space */
-    min-height: 0; /* Allow the container to be constrained by parent */
+    gap: 1.5rem;
 }
 
 .question-container {
@@ -84,11 +80,11 @@ li.option.active {
     background-color: #333;
     padding: 1.5rem;
     border-radius: 10px;
-    display: none; /* Initially hidden using display */
+    visibility: visible;
 }
 
-.result-container.active {
-    display: block; /* Shown when active */
+.result-container.hidden {
+   visibility: hidden;
 }
 
 .result-title {
@@ -135,6 +131,8 @@ li.option.active {
     margin: 20px 0;
 }
 
+
+
 /* Restart Button */
 .restart-btn {
     background-color: #28a745; /* Green */
@@ -152,19 +150,17 @@ li.option.active {
 }
 
 .restart-btn.hidden {
-    display: none; /* Hide using display none */
+    visibility: hidden;
 }
 
-.hidden {
-    display: none; /* Ensure hidden elements do not take space */
+.hidden{
+    visibility: hidden;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {
         padding: 1rem;
-        height: auto; /* Let it adjust based on content */
-        overflow: hidden; /* Prevent scrolling if not needed */
     }
 
     h1.title {
@@ -175,37 +171,10 @@ li.option.active {
         font-size: 1.25rem;
     }
 
-    .quiz-container {
-        flex-grow: 1; /* Allow the quiz container to take up remaining space */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem; /* Further reduce gap */
-    }
-
-    .question-container {
-        margin-bottom: 0.5rem; /* Reduce space between question and button */
-    }
-
     .btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.9rem;
     }
-
-    /* Ensure buttons are visible and spaced */
-    #next-button {
-        margin-top: auto; /* Push the button to the bottom */
-    }
 }
 
-@media (max-width: 430px) { /* Specific to iPhone 14 Pro Max */
-    .container {
-        padding: 1rem;
-        height: auto; /* Let it adjust based on content */
-        overflow: hidden; /* Prevent scrolling if not needed */
-    }
 
-    .quiz-container {
-        gap: 0.5rem; /* Further reduce gap */
-    }
-}
