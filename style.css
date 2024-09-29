@@ -181,6 +181,10 @@ li.option.active {
 @media (max-width: 600px) {
     .container {
         padding: 1rem;
+        height: 100vh; /* Ensure container height takes full mobile screen */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Spread content vertically */
     }
 
     h1.title {
@@ -198,10 +202,15 @@ li.option.active {
 
     /* Reduce gap between question container and next button */
     .quiz-container {
-        gap: 1rem; /* Reduce the gap from 1.5rem to 1rem on mobile */
+        gap: 0.75rem; /* Further reduce the gap on mobile */
     }
 
     .question-container {
-        margin-bottom: 0.5rem; /* Reduce bottom margin of question container */
+        margin-bottom: 0.5rem; /* Keep margin small */
+    }
+
+    /* Ensure no overflow occurs */
+    .container {
+        overflow: hidden; /* Disable any scrolling caused by overflow */
     }
 }
