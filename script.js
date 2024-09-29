@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Question array
     let quizQuestions = [];
 
-    // correct answers array based on questions order 
+    // correct answers array  based on questions order 
 
     let correctAnswers = []
 
