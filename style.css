@@ -181,10 +181,11 @@ li.option.active {
 @media (max-width: 600px) {
     .container {
         padding: 1rem;
-        height: 100vh; /* Ensure container height takes full mobile screen */
+        height: 100vh; /* Full mobile screen height */
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Spread content vertically */
+        justify-content: center; /* Center content */
+        overflow: hidden; /* Prevent scrolling */
     }
 
     h1.title {
@@ -195,22 +196,28 @@ li.option.active {
         font-size: 1.25rem;
     }
 
+    .quiz-container {
+        flex-grow: 1; /* Allow the quiz container to take up remaining space */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem; /* Reduce gap */
+        overflow: hidden; /* Ensure no overflow */
+    }
+
+    .question-container {
+        margin-bottom: 0.5rem; /* Reduce space between question and button */
+    }
+
     .btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.9rem;
     }
 
-    /* Reduce gap between question container and next button */
-    .quiz-container {
-        gap: 0.75rem; /* Further reduce the gap on mobile */
-    }
-
-    .question-container {
-        margin-bottom: 0.5rem; /* Keep margin small */
-    }
-
-    /* Ensure no overflow occurs */
-    .container {
-        overflow: hidden; /* Disable any scrolling caused by overflow */
+    /* Ensure buttons are visible and spaced */
+    #next-button {
+        margin-top: auto; /* Push the button to the bottom */
     }
 }
+
+
